@@ -1,13 +1,294 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.map-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.image-container {
+  position: absolute;
+  height: 700px;
+  width: 600px;
+  right: 0;
+  left: 0;
+  top: -83px;
+  bottom: 0;
+  margin: auto;
+}
+.map-container svg {
+  height: auto;
+  width: 100%;
+}
+
+svg path {
+  cursor: pointer;
+}
+svg path:hover {
+  fill: black;
+}
+
+.text {
+  z-index: 3;
+  color: #fff;
+  border-width: 2px;
+  text-shadow: 0 0 5px #1fd9b6, 0 0 10px #3ef7c7, 0 0 150px #0ff;
+  font-size: 1.2em;
+  width: 10%;
+  text-align: center;
+  border-radius: 5px;
+}
+.modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* transform: scale(0); */
+  z-index: 1;
+}
+
+.one {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.modal-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: absolute;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+  right: 0;
+  left: 0;
+  top: -83px;
+  bottom: 0;
+  margin: auto;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+.card-zoom {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.card-unzoom {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.card-content {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow-y: scroll;
+}
+button {
+  cursor: pointer;
+}
+.design {
+  color: white;
+  text-align: left;
+  line-height: 1.2em;
+  /* padding-left: 10px; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content-img img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+.content-img {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.content-desc {
+  margin-bottom: 15px;
+  font-size: 0.8em;
+  padding-left: 10px;
+}
+.content-title {
+  padding-left: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: black; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid white; /* creates padding around scroll thumb */
+}
+.card-province {
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 150px #0ff;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.close-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5em;
+  background-color: transparent;
+  color: white;
+  /* pointer-events: none; */
+  border: none;
+  z-index: 5;
+}
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
