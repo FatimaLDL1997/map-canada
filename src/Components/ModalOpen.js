@@ -62,15 +62,9 @@ const Wrapper = styled.div`
     }
     .card-zoom {
       font-size: 0.5rem;
-      width: 70vw;
+      width: 60vw;
       height: 70vh;
       top: 10vh;
-    }
-    .card::before {
-      width: 120%;
-      height: 120%;
-      left: -10%;
-      top: -10%;
     }
     .card-content {
       font-size: 1rem;
