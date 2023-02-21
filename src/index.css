@@ -186,7 +186,7 @@ button {
   color: white;
   /* text-align: left; */
   line-height: 1.2em;
-  /* padding-left: 10px; */
+  padding-right: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .content-img img {
