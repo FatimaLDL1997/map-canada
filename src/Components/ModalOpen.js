@@ -59,5 +59,9 @@ const Wrapper = styled.div`
     .close-icon {
       font-size: 1rem;
     }
+    .card-zoom {
+      font-size: 0.5rem;
+      width: 70vw;
+    }
   }
 `;
