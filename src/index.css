@@ -73,6 +73,11 @@ svg path:hover {
   text-align: center;
   border-radius: 5px;
 }
+@media screen and (max-width: 800px) {
+  .text {
+    width: fit-content;
+  }
+}
 .modal-container {
   position: fixed;
   display: table;
