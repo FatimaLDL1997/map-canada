@@ -66,5 +66,9 @@ const Wrapper = styled.div`
       height: 70vh;
       top: 10vh;
     }
+    .card::before {
+      width: 120%;
+      height: 120%;
+    }
   }
 `;
