@@ -57,9 +57,8 @@ export default ModalOpen;
 const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
     .close-icon {
-      font-size: 0.5rem;
-      width: 10px;
-      height: 10px;
+      width: 2rem;
+      height: 2rem;
     }
     .card-zoom {
       font-size: 0.5rem;
