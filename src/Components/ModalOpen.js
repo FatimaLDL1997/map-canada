@@ -72,5 +72,8 @@ const Wrapper = styled.div`
       left: -10%;
       top: -10%;
     }
+    .card-content {
+      font-size: 1rem;
+    }
   }
 `;
