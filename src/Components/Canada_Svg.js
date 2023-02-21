@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "../Pages/context";
 
 const Canada_Svg = () => {
-  const { setShowModal, clickMap } = useGlobalContext();
+  const { setShowModal, clickMap, display, setDisplay } = useGlobalContext();
   const [province, setProvince] = useState("");
   const [x, setX] = useState(null);
   const [y, setY] = useState(null);
@@ -15,7 +15,6 @@ const Canada_Svg = () => {
   // const [showModal, setShowModal] = useState(false);
   const [closeModal, setCloseModal] = useState(false);
   const [zIndex, setZIndex] = useState(0);
-  const [display, setDisplay] = useState("none");
 
   const handleClick = (e) => {
     // console.log(e);
