@@ -1,9 +1,11 @@
 import React from "react";
 
+import { useGlobalContext } from "../Pages/context";
+
 const Label = (props) => {
   return (
     <div
-      className="text"
+      className='text'
       style={{
         position: "absolute",
         left: props.x + "px",
