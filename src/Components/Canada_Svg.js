@@ -176,15 +176,13 @@ const Canada_Svg = () => {
   );
 };
 
-
-
 export default Canada_Svg;
 
 const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
     .image-container {
-      height: 50vh; 
-      width: 50vw; 
+      height: 70vh;
+      width: 70vw;
     }
   }
 `;

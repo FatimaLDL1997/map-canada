@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     .card-zoom {
       font-size: 0.5rem;
       width: 70vw;
-      height: 90vh;
+      height: 70vh;
       top: 10vh;
     }
   }
