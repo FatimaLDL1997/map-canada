@@ -69,6 +69,8 @@ const Wrapper = styled.div`
     .card::before {
       width: 120%;
       height: 120%;
+      left: -10%;
+      top: -10%;
     }
   }
 `;
