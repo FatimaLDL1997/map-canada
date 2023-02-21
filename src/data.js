@@ -86,4 +86,11 @@ export const landmarks = [
     desc: "Prince Edward Island is sparsely populated, with only around 144,000 people living there. Its capital is Charlottetown, and the province is home to aerospace and bioscience industries. There are also several IT and video game development firms based there. The province sees low crime rates, low housing costs, and a fairly mild climate throughout most of the year.",
     image: "/images/pei.jpg",
   },
+  {
+    id: 13,
+    province: "British Columbia",
+    title: "Capital: Victoria",
+    desc: "British Columbia is Canada’s westernmost province, and it is slightly larger than Alberta in terms of population, with a population of around 4.8 million people. It is located on North America’s West Coast, between the Rocky Mountains and the Pacific Ocean. The capital is Victoria, which is the 15th most populous metropolitan region in the country. BC’s economy was mainly dependent on resources, such as logging and mining. In recent years service industry jobs and construction jobs have taken over the region. The region has mild and rainy climates as well as subarctic climates. Most of the province is subarctic in nature.",
+    image: "/images/victoria.jpg",
+  },
 ];
