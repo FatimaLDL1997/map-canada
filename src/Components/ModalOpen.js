@@ -56,10 +56,8 @@ export default ModalOpen;
 
 const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
-    .map-container {
-      .close-icon {
-        font-size: 0.5rem;
-      }
+    .close-icon {
+      font-size: 1rem;
     }
   }
 `;
