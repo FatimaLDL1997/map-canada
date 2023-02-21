@@ -74,6 +74,7 @@ const Wrapper = styled.div`
     }
     .card-content {
       font-size: 1rem;
+      z-index: 2;
     }
   }
 `;
