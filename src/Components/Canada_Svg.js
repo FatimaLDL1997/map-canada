@@ -181,7 +181,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
     .image-container {
       height: 70vh;
-      width: 70vw;
+      width: 60vw;
       top: 10vh;
     }
   }

@@ -7,7 +7,6 @@ const AppProvider = ({ children }) => {
   const [isModalShow, setShowModal] = useState(false);
   const [zIndex, setZIndex] = useState(0);
   const [display, setDisplay] = useState("none");
-  const [scroll, setScroll] = useState("visible");
 
   const body = document.getElementsByClassName("body");
 

@@ -82,6 +82,10 @@ svg path:hover {
     width: fit-content;
   }
 }
+html,
+body {
+  overflow-y: hidden;
+}
 .modal-container {
   position: fixed;
   display: table;
