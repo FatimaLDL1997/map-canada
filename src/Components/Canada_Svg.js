@@ -182,7 +182,7 @@ const Wrapper = styled.div`
     .image-container {
       height: 70vh;
       width: 60vw;
-      top: 10vh;
+      top: 5vh;
     }
   }
 `;
