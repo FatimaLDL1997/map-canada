@@ -7,6 +7,8 @@
 :root {
   --card-height: 65vh;
   --card-width: calc(var(--card-height) / 1.5);
+  padding-top: 1rem;
+  padding-bottom: 32rem;
 }
 
 body {
@@ -43,12 +45,13 @@ body {
 
 .image-container {
   position: absolute;
-  height: 700px;
-  width: 600px;
+  height: 5vh;
+  width: 30vw;
   right: 0;
   left: 0;
-  top: -83px;
-  bottom: 0;
+  top: 0;
+  /* bottom: 0; */
+  padding-bottom: 100px;
   margin: auto;
 }
 .map-container svg {
