@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
     setIsClosed(false);
     setShowModal(true);
     setZIndex(-2);
-    setDisplay("none");
+    setDisplay("none"); //label
     body[0].style.overflowY = "hidden";
   };
 
