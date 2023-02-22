@@ -7,18 +7,23 @@ const AppProvider = ({ children }) => {
   const [isModalShow, setShowModal] = useState(false);
   const [zIndex, setZIndex] = useState(0);
   const [display, setDisplay] = useState("none");
+  const [scroll, setScroll] = useState("visible");
+
+  const body = document.getElementsByClassName("body");
 
   const clickClose = () => {
     setIsClosed(true);
     setShowModal(false);
     setZIndex(0);
     // setDisplay("block");
+    body[0].style.overflowY = "visible";
   };
   const clickMap = (e) => {
     setIsClosed(false);
     setShowModal(true);
     setZIndex(-2);
     setDisplay("block");
+    body[0].style.overflowY = "hidden";
   };
 
   return (
