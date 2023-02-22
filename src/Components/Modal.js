@@ -3,7 +3,7 @@ import ModalOpen from "./ModalOpen";
 import ModalClose from "./ModalClose";
 import { useGlobalContext } from "../Pages/context";
 const Modal = (props) => {
-  const { isClosed, isModalShow, scroll } = useGlobalContext();
+  const { isClosed, isModalShow } = useGlobalContext();
   // const x = props.showModal;
   // const province = props.province;
   // const select = false;

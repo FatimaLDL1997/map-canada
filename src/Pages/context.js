@@ -14,14 +14,14 @@ const AppProvider = ({ children }) => {
     setIsClosed(true);
     setShowModal(false);
     setZIndex(0);
-    // setDisplay("block");
+    setDisplay("block");
     body[0].style.overflowY = "visible";
   };
   const clickMap = (e) => {
     setIsClosed(false);
     setShowModal(true);
     setZIndex(-2);
-    setDisplay("block");
+    setDisplay("none");
     body[0].style.overflowY = "hidden";
   };
 
