@@ -82,16 +82,16 @@ svg path:hover {
     width: fit-content;
   }
   .content-desc {
-    font-size: 0.8em !important;
+    font-size: 0.9em !important;
   }
   .design {
-    line-height: 1.2em !important;
+    line-height: 1.5em !important;
   }
   .card-province {
     font-size: 1.5em !important;
   }
   .content-title {
-    font-size: 0.8em !important;
+    font-size: 0.9em !important;
   }
 }
 html,
