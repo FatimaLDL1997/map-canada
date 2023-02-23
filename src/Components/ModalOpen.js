@@ -63,8 +63,15 @@ const Wrapper = styled.div`
     .card-zoom {
       font-size: 0.5rem;
       width: 60vw;
-      height: 70vh;
-      top: 10vh;
+      position: absolute;
+      height: 80vh;
+      top: 0.5rem;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
     .card-content {
       font-size: 1rem;
