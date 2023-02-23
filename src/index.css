@@ -230,7 +230,7 @@ button {
   padding-left: 10px;
   font-size: 1.8em;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 
   padding: 2rem;
   text-transform: uppercase;
@@ -250,7 +250,7 @@ button {
   border: 3px solid white; /* creates padding around scroll thumb */
 }
 .card-province {
-  font-size: 1.5em;
+  font-size: 2.5em;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 150px #0ff;
   margin-top: 50px;
   margin-bottom: 20px;
