@@ -81,6 +81,18 @@ svg path:hover {
   .text {
     width: fit-content;
   }
+  .content-desc {
+    font-size: 0.8em !important;
+  }
+  .design {
+    line-height: 1.2em !important;
+  }
+  .card-province {
+    font-size: 1.5em !important;
+  }
+  .content-title {
+    font-size: 0.8em !important;
+  }
 }
 html,
 body,
@@ -209,7 +221,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   width: 95%;
-  padding: 1rem;
+  padding: 1.5rem;
   padding-top: 0;
   padding-bottom: 0;
 }
