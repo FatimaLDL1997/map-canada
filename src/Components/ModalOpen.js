@@ -22,7 +22,9 @@ const ModalOpen = (props) => {
                       <AiOutlineCloseCircle />
                     </button>
                   </div>
-                  <div className='design card-province'>{props.province}</div>
+                  <div lang='en' className='design card-province'>
+                    {props.province}
+                  </div>
                   {landmarks
                     .filter((landmark) => landmark.province === props.province)
                     .map((filteredLandmark) => {
